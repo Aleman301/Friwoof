@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Friwoof - Neutralizador Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #5E3D90, #A59CD8);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .subtitulo {
+      font-size: 1.5rem;
+      color: #dcd6f7;
+    }
+
+    .benefits {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+    }
+
+    .benefits div {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .benefits div:hover {
+      transform: scale(1.05);
+    }
+
+    .mascota-img {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .mascota-img img {
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .eslogan {
+      text-align: center;
+      font-style: italic;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      color: #f1e9ff;
+    }
+
+    .tienda {
+      margin: 4rem 0;
+      text-align: center;
+    }
+
+    .tienda h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tienda-productos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .producto {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 15px;
+      width: 250px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .producto h3 {
+      margin: 0.5rem 0;
+    }
+
+    .producto p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn-comprar {
+      background-color: #3e2a68;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn-comprar:hover {
+      background-color: #6d53b2;
+    }
+
+    .testimonios {
+      margin: 4rem 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    .testimonios h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .carrusel {
+      display: flex;
+      gap: 1.5rem;
+      animation: deslizar 30s linear infinite;
+    }
+
+    .testimonio-item {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 1rem;
+      border-radius: 15px;
+      width: 300px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      text-align: left;
+    }
+
+    .testimonio-texto {
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .estrellas {
+      color: gold;
+      margin-bottom: 0.3rem;
+    }
+
+    .nombre-persona {
+      text-align: right;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #f1e9ff;
+    }
+
+    @keyframes deslizar {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .qr-social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .qr-social img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .qr-social a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background-color: #3e2a68;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .qr-social a:hover {
+      background-color: #6d53b2;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Friwoof</h1>
+    <p class="subtitulo">Neutralizador de Malos Olores para Perros</p>
+  </header>
+
+  <section class="benefits">
+    <div>✅ Elimina los malos olores</div>
+    <div>🐶 Seguro para tu mascota</div>
+    <div>🌿 Aroma fresco y agradable</div>
+  </section>
+
+  <!-- El resto del contenido permanece igual -->
+
+
+  <div class="mascota-img">
+    <img src="C:\Users\Usuario\Desktop\logo\LogoconEslogan.png" alt="Imagen de mascota y producto Friwoof">
+  </div>
+
+  <p class="eslogan">"Frescura que te acerca a tu mascota, malos olores que se van."</p>
+
+  <section class="tienda">
+    <h2>Tienda</h2>
+    <div class="tienda-productos">
+      <div class="producto">
+        <img src="C:\Users\Usuario\Desktop\logo\WhatsApp Image 2025-04-12 at 3.25.25 PM.png" alt="Spray 200ml">
+        <h3>Spray 200ml</h3>
+        <p>Perfecto para llevar contigo a todas partes.</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="C:\Users\Usuario\Desktop\logo\WhatsApp Image 2025-04-12 at 3.25.25 PM.png" alt="Spray 300ml">
+        <h3>Spray 300ml</h3>
+        <p>Equilibrio ideal entre tamaño y duración.</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="C:\Users\Usuario\Desktop\logo\WhatsApp Image 2025-04-12 at 3.25.25 PM.png" alt="Spray 500ml">
+        <h3>Spray 500ml</h3>
+        <p>Para hogares con más de una mascota.</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonios">
+    <h2>Testimonios</h2>
+    <div class="carrusel">
+      <div class="testimonio-item">
+        <div class="testimonio-texto">"Desde que uso Friwoof, mi perro y mi sala huelen genial. ¡Es mágico!"</div>
+        <div class="estrellas">★★★★★</div>
+        <div class="nombre-persona">Ana M.</div>
+      </div>
+      <div class="testimonio-item">
+        <div class="testimonio-texto">"Me encanta que sea natural y seguro para Max. Lo recomiendo 100%."</div>
+        <div class="estrellas">★★★★★</div>
+        <div class="nombre-persona">Carlos G.</div>
+      </div>
+      <div class="testimonio-item">
+        <div class="testimonio-texto">"El aroma es delicioso y dura bastante. Excelente producto."</div>
+        <div class="estrellas">★★★★☆</div>
+        <div class="nombre-persona">Sofía L.</div>
+      </div>
+      <div class="testimonio-item">
+        <div class="testimonio-texto">"Ideal para mi perrita Luna, ya no huele feo su camita."</div>
+        <div class="estrellas">★★★★★</div>
+        <div class="nombre-persona">Luis F.</div>
+      </div>
+      <div class="testimonio-item">
+        <div class="testimonio-texto">"Lo usamos en la veterinaria y ha sido un éxito con los clientes."</div>
+        <div class="estrellas">★★★★★</div>
+        <div class="nombre-persona">Claudia V.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="qr-social">
+    <img src="C:\Users\Usuario\Desktop\logo\Etiquetas\Freewoof.png" alt="Código QR">
+    <a href="#">@Friwoof</a>
+  </div>
+
+  <footer>
+    Mercadotecnia I - PAC 2025 - CUROC UNAH
+  </footer>
+</body>
+
+</html>
